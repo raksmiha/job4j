@@ -51,7 +51,7 @@ public class CalculatorTest {
      */ @Test
     public void whenMultiplyTwoAndTwoThenFour() {
         Calculator calc = new Calculator();
-        calc.add(2D, 2D);
+        calc.multi(2D, 2D);
         double result = calc.getResult();
         double expected = 4D;
         assertThat(result, is(expected));
