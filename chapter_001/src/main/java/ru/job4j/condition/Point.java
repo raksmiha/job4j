@@ -7,6 +7,9 @@ package ru.job4j.condition;
  * @version $Id$
  */
 public class Point {
+    /**
+     * Variable x and y - our points.
+     */
     private int x;
     private int y;
 
@@ -15,10 +18,13 @@ public class Point {
         this.y = y;
     }
 
+    /**
+     * Method distanceTo.
+     * @param that - our object with points.
+     * @return distance.
+     */
     public double distanceTo(Point that) {
-        return Math.sqrt(
-                Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2)
-        );
+        return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
     }
 
     public static void main(String[] args) {

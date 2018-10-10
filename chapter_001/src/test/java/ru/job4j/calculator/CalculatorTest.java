@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
  */
 public class CalculatorTest {
     /**
-     *Test method add.
+     *Test method distanceTo.
      */ @Test
     public void whenAddOnePlusOneThenTwo() {
         Calculator calc = new Calculator();
