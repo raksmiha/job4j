@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
 /**
- * Class Point для вычисления координат.
+ * Class DummyBot for using operator if.
  * @author Prohorov Mikhail (mailto:gorunovka93@gmail.com)
  * @since 11.10.2018
  * @version $Id$
