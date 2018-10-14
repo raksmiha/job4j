@@ -14,6 +14,6 @@ public class Max {
      * @return answer.
      */
     public int max(int first, int second) {
-        return Math.max(first, second);
+        return first > second ? first : second;
     }
 }
