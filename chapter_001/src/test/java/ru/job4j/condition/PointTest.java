@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 public class PointTest {
     /**
      * test method distanceTo.
-     */ @Test
+     */@Test
     public void whenFirstPointZeroAndOneSecondPointOneAndOneThenDistanceOne() {
         Point a = new Point(0, 1);
         Point b = new Point(1, 1);
