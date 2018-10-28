@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
 /**
- * Class Max.
+ * Class Counter.
  * @author Prohorov Mikhail (mailto:gorunovka93@gmail.com)
  * @since 25.10.2018
  * @version 1.0
