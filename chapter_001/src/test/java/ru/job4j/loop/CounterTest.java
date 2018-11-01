@@ -6,7 +6,6 @@ import static org.junit.Assert.assertThat;
 
 /**
  * Test.
- *
  * @author Mikhail Prokhorov (mailto:gorunovka93@gmail.com)
  * @version 1
  * @since 26.10.2018
