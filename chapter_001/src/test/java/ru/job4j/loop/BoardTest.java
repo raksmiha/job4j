@@ -13,9 +13,17 @@ import static org.junit.Assert.assertThat;
 public class BoardTest {
 	@Test
 	public void whenWidthThreeAndHieghtThree() {
-		Board board - new Board();
+		Board board = new Board();
 		String rs1 = board.paint(3, 3);
 		String ln = System.lineSeparator();
-		assertThat(rs1, is(String.format("X X%s X %sX X%s", ln, ln, ln);
+		assertThat(rs1, is(String.format("X X%s X %sX X%s", ln, ln, ln)));
+	}
+	
+	@Test
+	public void whenWidthFiveAndHieghtFour() {
+		Board board = new Board();
+		String rs1 = board.paint(5, 4);
+		String ln = System.lineSeparator();
+		assertThat(rs1, is(String.format("X X X%s X X %sX X X%s X X %s", ln, ln, ln, ln)));
 	}
 }
