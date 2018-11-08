@@ -7,22 +7,50 @@ package ru.job4j.loop;
  * @version 1.0
  */
 public class Paint {
-	public String piramid(int h) {
+	public String pyramid(int height) {
 		StringBuilder screen = new StringBuilder();
-		String ln = System.lineSeparator();
-		for (int i = 0; i < h; i++) {
-			int emptySpace = h - (i + 1);
-			int sybvols = (i + 1) * 2 - 1;
-			for (int n = 0; n < emptySpace; n++) {
-				screen.append(" ");
+		int weight = 2 * height - 1;
+		for (int row = 0; row != height; row++) {
+			for (int column = 0; column != weight; column++) {
+				if (row >= height - column - 1 && row + height - 1 >= column) {
+					screen.append("^");
+				} else {
+					screen.append(" ");
+				}
 			}
-			for (int n = 0; n < sybvols; n++) {
-				screen.append("^");
+			screen.append(System.lineSeparator());
+		}
+		return screen.toString();
+	}
+
+	public String leftTrl(int height) {
+		StringBuilder screen = new StringBuilder();
+		int weight = height;
+		for (int row = 0; row != height; row++) {
+			for (int column = 0; column != weight; column++) {
+				if (row >= (weight - column - 1)) {
+					screen.append("^");
+				} else {
+					screen.append(" ");
+				}
 			}
-			for (int n = 0; n < emptySpace; n++) {
-				screen.append(" ");
+			screen.append(System.lineSeparator());
+		}
+		return screen.toString();
+	}
+
+	public String rightTrl(int height) {
+		StringBuilder screen = new StringBuilder();
+		int weight = height;
+		for (int row = 0; row != height; row++) {
+			for (int column = 0; column != weight; column++) {
+				if (row >= column) {
+					screen.append("^");
+				} else {
+					screen.append(" ");
+				}
 			}
-			screen.append(ln);
+			screen.append(System.lineSeparator());
 		}
 		return screen.toString();
 	}
