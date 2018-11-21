@@ -21,8 +21,11 @@ public class ArrayChar {
 	public boolean startWith(String prefix) {
 		boolean result = true;
 		char[] value = prefix.toCharArray();
-		if (String.copyValueOf(this.data).startsWith(String.copyValueOf(value)) == false) {
-			result = false;
+		for (int i = 0; i < value.length; i++) {
+			if (this.data[i] != value[i]) {
+				result = false;
+				break;
+			}
 		}
 		return result;
 	}
