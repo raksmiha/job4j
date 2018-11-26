@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 public class MatrixCheckTest {
 	/**
 	 * Method whenDataMonoByTrueThenTrue for checking method
-	 mono when all diagonals is quals and array is odd;
+	 mono when main diagonal is quals and array is odd.
 	 */	@Test
 	public void whenDataMonoByTrueThenTrueArrayOdd() {
         MatrixCheck check = new MatrixCheck();
@@ -29,7 +29,7 @@ public class MatrixCheckTest {
 
 	/**
 	 * Method whenDataMonoByTrueThenTrue for checking method
-	 mono when all diagonals is not quals and array is odd;
+	 mono when main diagonal is not quals and array is odd.
 	 */ @Test
     public void whenDataNotMonoByTrueThenFalseArrayOdd() {
         MatrixCheck check = new MatrixCheck();
@@ -44,15 +44,15 @@ public class MatrixCheckTest {
 	
 	/**
 	 * Method whenDataMonoByTrueThenTrue for checking method
-	 mono when all diagonals is quals and array is even;
+	 mono when main diagonal is quals and array is even.
 	 */	@Test
 	public void whenDataMonoByTrueThenTrueArrayEven() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][] {
-                {true, false, false, true},
-                {false, true, true, false},
-                {false, true, true, false},
-				{true, false, false, true}
+                {true, false, false, false},
+                {false, true, false, false},
+                {false, false, true, false},
+                {false, false, false, true}
         };
         boolean result = check.mono(input);
         assertThat(result, is(true));
@@ -60,7 +60,7 @@ public class MatrixCheckTest {
 
 	/**
 	 * Method whenDataMonoByTrueThenTrue for checking method
-	 mono when all diagonals is not quals and array is even;
+	 mono when main diagonal is not quals and array is even.
 	 */ @Test
     public void whenDataNotMonoByTrueThenFalseArrayEven() {
         MatrixCheck check = new MatrixCheck();
