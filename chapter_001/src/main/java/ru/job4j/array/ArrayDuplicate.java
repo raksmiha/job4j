@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class ArrayDuplicate {
 	/**
-	 * Method remove for finding quals elements and remove duplicates.
+	 * Method remove for finding equals elements and remove duplicates.
 	 * @param array is our array.
 	 * @return array without duplicates.
 	 */
