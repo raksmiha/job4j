@@ -19,7 +19,7 @@ public class ArrayDuplicate {
 		int endArray = array.length;
 		String change;
 		for (int i = 0; i < endArray; i++) {
-			for (int j = checking; j < endArray; j++){
+			for (int j = checking; j < endArray; j++) {
 				if (array[i].equals(array[j])) {
 					change = array[j];
 					array[j] = array[endArray - 1];
@@ -30,7 +30,7 @@ public class ArrayDuplicate {
 			}
 			checking++;
 		}
-		array = Arrays.copyOf(array,endArray);
+		array = Arrays.copyOf(array, endArray);
 		return array;
 	}
 }

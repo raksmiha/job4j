@@ -14,7 +14,7 @@ public class ArrayDuplicateTest {
 	/**
 	 * Method for testing method remove.
 	 */ @Test
-	public void WhenArrayWithDuplicatesThenArreyWithoutDuplicates() {
+	public void whenArrayWithDuplicatesThenArreyWithoutDuplicates() {
 		ArrayDuplicate array = new ArrayDuplicate();
 		String[] expectArray = {"Привет", "Мир", "Супер"};
 		String[] resultArray = {"Привет", "Мир", "Привет", "Супер", "Мир"};
