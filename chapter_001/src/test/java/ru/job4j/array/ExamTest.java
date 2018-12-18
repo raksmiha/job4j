@@ -19,7 +19,7 @@ public class ExamTest {
 		int[] first = {1, 3, 4, 4, 4};
 		int[] second = {2, 4, 4, 4, 8, 9};
 		int[] expectArray = {1, 2, 3, 4, 4, 4, 4, 4, 4, 8, 9};
-		int resultArray[] = array.sortArrays(first, second);
+		int[] resultArray = array.sortArrays(first, second);
 		assertThat(resultArray, is(expectArray));
 	}
 
@@ -31,7 +31,7 @@ public class ExamTest {
 		int[] first = {1, 3, 4, 4, 4, 8, 9};
 		int[] second = {2, 4, 4, 4};
 		int[] expectArray = {1, 2, 3, 4, 4, 4, 4, 4, 4, 8, 9};
-		int resultArray[] = array.sortArrays(first, second);
+		int[] resultArray = array.sortArrays(first, second);
 		assertThat(resultArray, is(expectArray));
 	}
 }

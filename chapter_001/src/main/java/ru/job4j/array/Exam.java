@@ -19,16 +19,13 @@ public class Exam {
 			if (i >= first.length) {
 				third[n] = second[j];
 				j++;
-			}
-			else if (j >= second.length) {
+			} else if (j >= second.length) {
 				third[n] = first[i];
 				i++;
-			}
-			else if (first[i] < second[j]) {
+			} else if (first[i] < second[j]) {
 				third[n] = first[i];
 				i++;
-			}
-			else {
+			} else {
 				third[n] = second[j];
 				j++;
 			}
