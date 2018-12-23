@@ -69,31 +69,47 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean result = false;
-        for (int n = 0; n != table.length; n++) {
-            if (table[n][n] == 1) {
+        for (int i = 0; i < table.length; i++) {
+            int a = 0;
+            int b = 0;
+            for (int j = 0; j < table.length; j++) {
+                if (table[i][j] == 1) {
+                    a++;
+                }
+                if (table[j][i] == 1) {
+                    b++;
+                }
+            }
+            if (a == table.length || b == table.length) {
                 result = true;
-                if (table[0][n] == table[n][n]) {
-                    for (int i = 1; i < table.length; i++) {
-                        if (table[i - 1][n] != table[i][n]) {
-                            result = false;
-                            break;
-                        }
-                    }
-                    break;
-                }
-                if (table[n][0] == table[n][n]) {
-                    for (int i = 1; i < table.length; i++) {
-                        if (table[n][i - 1] != table[n][i]) {
-                            result = false;
-                            break;
-                        }
-                    }
-                    break;
-                }
-                result = false;
                 break;
             }
         }
+//        for (int n = 0; n != table.length; n++) {
+//            if (table[n][n] == 1) {
+//                result = true;
+//                if (table[0][n] == table[n][n]) {
+//                    for (int i = 1; i < table.length; i++) {
+//                        if (table[i - 1][n] != table[i][n]) {
+//                            result = false;
+//                            break;
+//                        }
+//                    }
+//                    break;
+//                }
+//                if (table[n][0] == table[n][n]) {
+//                    for (int i = 1; i < table.length; i++) {
+//                        if (table[n][i - 1] != table[n][i]) {
+//                            result = false;
+//                            break;
+//                        }
+//                    }
+//                    break;
+//                }
+//                result = false;
+//                break;
+//            }
+//        }
         return result;
     }
 
