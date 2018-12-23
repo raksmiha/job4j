@@ -85,7 +85,30 @@ public class Logic {
                 break;
             }
         }
-//        for (int n = 0; n != table.length; n++) {
+//        if (table[0][0] == 1) {
+//                result = true;
+//                if (table[0][0] == table[1][0]) {
+//                    for (int i = 2; i < table.length; i++) {
+//                        if (table[i - 1][0] != table[i][0]) {
+//                            result = false;
+//                            break;
+//                        }
+//                    }
+//                    return result;
+//                }
+//                if (table[0][0] == table[0][1]) {
+//                    for (int i = 2; i < table.length; i++) {
+//                        if (table[0][i - 1] != table[0][i]) {
+//                            result = false;
+//                            break;
+//                        }
+//                    }
+//                    return result;
+//                }
+//                result = false;
+//                return result;
+//            }
+//        for (int n = 1; n != table.length; n++) {
 //            if (table[n][n] == 1) {
 //                result = true;
 //                if (table[0][n] == table[n][n]) {
