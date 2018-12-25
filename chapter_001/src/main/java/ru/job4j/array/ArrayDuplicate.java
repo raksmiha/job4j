@@ -16,21 +16,21 @@ public class ArrayDuplicate {
 	 */
 	public String[] remove(String[] array) {
 		int checking = 1;
-		int endArray = array.length;
+		int end = array.length;
 		String change;
-		for (int i = 0; i < endArray; i++) {
-			for (int j = checking; j < endArray; j++) {
+		for (int i = 0; i < end; i++) {
+			for (int j = checking; j < end; j++) {
 				if (array[i].equals(array[j])) {
 					change = array[j];
-					array[j] = array[endArray - 1];
-					array[endArray - 1] = change;
+					array[j] = array[end - 1];
+					array[end - 1] = change;
 					j--;
-					endArray--;
+					end--;
 				}
 			}
 			checking++;
 		}
-		array = Arrays.copyOf(array, endArray);
+		array = Arrays.copyOf(array, end);
 		return array;
 	}
 }
