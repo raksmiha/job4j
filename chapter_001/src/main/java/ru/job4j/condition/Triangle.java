@@ -7,15 +7,21 @@ package ru.job4j.condition;
  * @version $Id$
  */
 public class Triangle {
-	private Point a;
-	private Point b;
-	private Point c;
-	
-	public Triangle(Point a, Point b, Point c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
-	}
+    private Point first;
+    private Point second;
+    private Point third;
+
+    /**
+     * DConstructor create three points.
+     * @param ap
+     * @param bp
+     * @param cp
+     */
+    public Triangle(Point ap, Point bp, Point cp) {
+        this.first = ap;
+        this.second = bp;
+        this.third = cp;
+    }
 	
 	/**
 	* Method for calculate half of period.
@@ -35,13 +41,13 @@ public class Triangle {
 	* @return return area if triangle exist.
 	*/
 	public double area() {
-		double rsl = -1;
-		double ab = this.a.distance(this.b);
-		double ac = this.a.distance(this.c);
-		double bc = this.b.distance(this.c);
-		double p = this.period(ab, ab, bc);
-		if (this.exist(ab, ac, bc)) {
-			rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
+        double rsl = -1;
+        double a = first.distance(second);
+        double b = first.distance(third);
+        double c = second.distance(third);
+        double p = period(a, b, c);
+        if (this.exist(a, b, c)) {
+			rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 		}
 		return rsl;
 	}
