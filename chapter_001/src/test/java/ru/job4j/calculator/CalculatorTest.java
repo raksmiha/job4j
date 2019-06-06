@@ -14,13 +14,32 @@ import static org.junit.Assert.assertThat;
  */
 public class CalculatorTest {
     /**
-     *Test method distanceTo.
+     *Test method add.
      */ @Test
     public void whenAddOnePlusOneThenTwo() {
         Calculator calc = new Calculator();
-        calc.add(1D, 1D);
-        double result = calc.getResult();
+        double result = calc.add(1D, 1D);
         double expected = 2D;
+        assertThat(result, is(expected));
+    }
+
+    /**
+     *Test method add.
+     */ @Test
+    public void whenAddOnePlusOnePlusOneThenThree() {
+        Calculator calc = new Calculator();
+        double result = calc.add(1D, 1D, 1D);
+        double expected = 3D;
+        assertThat(result, is(expected));
+    }
+
+    /**
+     *Test method add.
+     */ @Test
+    public void whenAddOnePlusOnePlusOnePlusOneThenFour() {
+        Calculator calc = new Calculator();
+        double result = calc.add(1D, 1D, 1D, 1D);
+        double expected = 4D;
         assertThat(result, is(expected));
     }
 

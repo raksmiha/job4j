@@ -14,12 +14,39 @@ public class Calculator {
     private double result;
 
     /**
-     * Method add.
+     * Method add for two numbers.
      * @param first - first number.
      * @param second - second number.
      */
-    public void add(double first, double second) {
-        this.result = first + second;
+    public double add(double first, double second) {
+        return first + second;
+    }
+
+    /**
+     * Method add for two numbers.
+     * @param first - first number.
+     * @param second - second number.
+     * @param third - third number.
+     */
+    public double add(double first, double second, double third) {
+        return add(
+                first,
+                add(second, third)
+        );
+    }
+
+    /**
+     * Method add for two numbers.
+     * @param first - first number.
+     * @param second - second number.
+     * @param third - third number.
+     * @param fourth - fourth number.
+     */
+    public double add(double first, double second, double third, double fourth) {
+        return add(
+                add(first, second),
+                add(third, fourth)
+        );
     }
 
     /**

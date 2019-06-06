@@ -18,6 +18,7 @@ public class MaxTest {
 		int result = maxim.max(1, 2);
 		assertThat(result, is(2));
 	}
+
 	/**
 	* Test method max with three numbers.
 	*/ @Test
@@ -25,5 +26,14 @@ public class MaxTest {
 		Max maxim = new Max();
 		int result = maxim.max(1, 2, 3);
 		assertThat(result, is(3));
+	}
+
+	/**
+	 * Test method max with three numbers.
+	 */ @Test
+	public void whenOneLessTwoLessThreeLessFourThenFour() {
+		Max maxim = new Max();
+		int result = maxim.max(1, 2, 3, 4);
+		assertThat(result, is(4));
 	}
 }

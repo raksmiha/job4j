@@ -21,10 +21,22 @@ public class Max {
      * Method max for find maximuum of three numbers.
      * @param first first number.
      * @param second second number.
-	 * @param second second number.
+	 * @param third third number.
      * @return answer.
      */
 	public int max(int first, int second, int third) {
 		return max(max(first, second), third);
+	}
+
+	/**
+	 * Method max for find maximuum of four numbers.
+	 * @param first first number.
+	 * @param second second number.
+	 * @param third third number.
+	 * @param fouth - fourth number.
+	 * @return answer.
+	 */
+	public int max(int first, int second, int third, int fouth) {
+		return max(max(first, second), max(third, fouth));
 	}
 }
