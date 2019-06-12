@@ -26,11 +26,33 @@ public class PointTest {
     }
 
     /**
-     * test method distance point to itself.
+     * test method distance point to itself for two points.
      */@Test
-    public void whenCheckItself() {
+    public void whenCheckItselfForTwoPoints() {
         Point point = new Point(0, 0);
         double result = point.distance(point);
+        assertThat(result, is(0D));
+    }
+
+    /**
+     * test method distance3d.
+     */@Test
+    public void whenOneAndTwoAndTwoThenThree() {
+        Point first = new Point(0, 0, 0);
+        Point second = new Point(1, 2, 2);
+        double result = first.distance3d(second);
+        first.info3d();
+        second.info3d();
+        System.out.println(String.format("Result is %s", result));
+        assertThat(result, is(3D));
+    }
+
+    /**
+     * test method distance3d point to itself for three points.
+     */@Test
+    public void whenCheckItselfForThreePoints() {
+        Point point = new Point(0, 0, 0);
+        double result = point.distance3d(point);
         assertThat(result, is(0D));
     }
 
